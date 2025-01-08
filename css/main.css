@@ -12,7 +12,7 @@ html, body {
 }
 
 html {
-    background-color: rgb(50, 39, 39);
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -32,5 +32,5 @@ body {
     transform:scale(2.5,1); /* W3C */
     font-size: 1em;
     letter-spacing: -0.25vh;
-    color: white;
+    color: black;
 }
