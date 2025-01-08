@@ -15,9 +15,14 @@ html {
     background-color: rgb(50, 39, 39);
 }
 
-/* body {
-
-} */
+body {
+    overflow-x: hidden;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
 
 #name{
     text-align: center;
