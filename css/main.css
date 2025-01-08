@@ -14,3 +14,18 @@ html, body {
 html {
     background-color: rgb(50, 39, 39);
 }
+
+/* body {
+
+} */
+
+#name{
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    -webkit-transform:scale(2.5,1); /* Safari and Chrome */
+    transform:scale(2.5,1); /* W3C */
+    font-size: 1em;
+    letter-spacing: -0.25vh;
+    color: white;
+}
