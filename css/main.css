@@ -30,7 +30,7 @@ body {
     display: inline-block;
     -webkit-transform:scale(2.5,1); /* Safari and Chrome */
     transform:scale(2.5,1); /* W3C */
-    font-size: 100px;
+    font-size: 60px;
     letter-spacing: -0.25vh;
     color: black;
 }
@@ -42,7 +42,7 @@ body {
     display: inline-block;
     -webkit-transform:scale(2.5 , 1);
     transform:scale(2.5, 1);
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: -0.125vh;
     color:black;
 }
