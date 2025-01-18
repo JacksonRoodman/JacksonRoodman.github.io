@@ -18,14 +18,15 @@ html {
 body {
     overflow-x: hidden;
     display: flex;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
+    text-align:end;
+    align-items: end;
+    justify-content: end;
     flex-direction: column; 
 }
 
 #name{
     text-align: left;
+    text-indent: 500px;
     font-weight: 800;
     display: inline-block;
     -webkit-transform:scale(2.5,1); /* Safari and Chrome */
@@ -36,7 +37,7 @@ body {
     color: black;
 }
 
-.link{
+#button{
     text-align: left;
     font-family: Helvetica, sans-serif;
     font-weight: 400;
@@ -46,6 +47,10 @@ body {
     font-size: 20px;
     letter-spacing: -0.125vh;
     color:black;
+}
+
+.link{
+
 }
 
 .link:hover{
