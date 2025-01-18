@@ -48,6 +48,8 @@ body {
 .link:hover{
     opacity: 40%;
     transition: all 0.4s ease-in-out;
+    color:white;
+    background-color: black;
 }
 
 /* Extra small devices (phones, 600px and down) */
