@@ -18,15 +18,15 @@ html {
 body {
     overflow-x: hidden;
     display: flex;
-    text-align:end;
+    /* text-align:end;
     align-items: end;
-    justify-content: end;
+    justify-content: end; */
     flex-direction: column; 
 }
 
 #name{
-    text-align: left;
-    text-indent: 500px;
+    text-align: justify;
+    /* text-indent: 1000px; */
     font-weight: 800;
     display: inline-block;
     -webkit-transform:scale(2.5,1); /* Safari and Chrome */
@@ -38,7 +38,7 @@ body {
 }
 
 #button{
-    text-align: left;
+    text-align: justify;
     font-family: Helvetica, sans-serif;
     font-weight: 400;
     display: inline-block;
