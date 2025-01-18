@@ -18,9 +18,9 @@ html {
 body {
     overflow-x: hidden;
     display: flex;
-    /* text-align:end;
-    align-items: end;
-    justify-content: end; */
+    text-align:center;
+    align-items: center;
+    justify-content: center;
     flex-direction: column; 
 }
 
@@ -50,6 +50,7 @@ body {
 }
 
 .link{
+    text-align: center;
     text-decoration: none;
     color:black;
     font-weight: 400;
