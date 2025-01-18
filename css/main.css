@@ -47,3 +47,8 @@ body {
     letter-spacing: -0.125vh;
     color:black;
 }
+
+.link:hover{
+    opacity:70%;
+    transition: all 0.4s ease-in-out;
+}
