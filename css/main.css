@@ -37,18 +37,6 @@ body {
     color: black;
 }
 
-#button{
-    /* text-align:center;
-    font-family: Helvetica, sans-serif;
-    font-weight: 400;
-    display: inline-block;
-    -webkit-transform:scale(2.5 , 1);
-    transform:scale(2.5, 1);
-    font-size: 20px;
-    letter-spacing: -0.125vh;
-    color:black; */
-}
-
 .link{
     text-align: center;
     text-decoration: none;
