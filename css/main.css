@@ -62,7 +62,7 @@ body {
         right: -400px;
     }
     to{
-        left:-400px;
+        right:100vw;
     }
 }
 
