@@ -3,7 +3,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   transition: all 0.3s ease;
+   cursor: url('../assets/dg.png'), auto;
+   /* transition: all 0.3s ease; */
 }
 
 html, body {
