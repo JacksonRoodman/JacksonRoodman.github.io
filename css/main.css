@@ -58,6 +58,14 @@ body {
     animation: move-left 10s linear infinite;
 }
 
+.monkey {
+    position: absolute;
+    width:140px;
+    height:140px;
+    top: 15%;
+    left: 83%;
+}
+
 @keyframes move-left{
     from{
         right: -400px;
