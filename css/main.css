@@ -75,6 +75,15 @@ body {
     animation: move-horizontal 14s linear infinite;
 }
 
+.bird{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top:12%;
+    left: -300px;
+    animation: move-right 8s linear infinite;
+}
+
 @keyframes move-horizontal {
     0% {
       left: -50vw;
@@ -99,6 +108,15 @@ body {
     }
     to{
         right: 100vw;
+    }
+}
+
+@keyframes move-left{
+    from{
+        left: -10vw;
+    }
+    to{
+        left: 10vw;
     }
 }
 
