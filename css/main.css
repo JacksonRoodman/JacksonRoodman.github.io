@@ -84,6 +84,14 @@
      left: -300px;
      animation: move-right 7s linear infinite;
  }
+
+ .grass{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top:90%;
+    left: 0px;
+ }
  
  @keyframes move-horizontal {
      0% {
