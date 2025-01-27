@@ -77,11 +77,11 @@
  
  .bird{
      position: absolute;
-     width: 100px;
-     height: 100px;
+     transform: scaleX(-1);
+     width: 110px;
+     height: 110px;
      top:18%;
      left: -300px;
-     transform: scaleX(-1);
      animation: move-right 7s linear infinite;
  }
  
