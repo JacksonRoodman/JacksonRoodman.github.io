@@ -111,7 +111,7 @@ body {
     }
 }
 
-@keyframes move-left{
+@keyframes move-right{
     from{
         left: -10vw;
     }
