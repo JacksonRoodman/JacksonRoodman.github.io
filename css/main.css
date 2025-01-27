@@ -62,8 +62,8 @@ body {
     position: absolute;
     width:60px;
     height:60px;
-    top: 15%;
-    right: 400px;
+    top:40%;
+    right: 200px;
 }
 
 @keyframes move-left{
