@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../assets/dg.png'), auto;
+    /* transition: all 0.3s ease; */
+ }
+ 
+ html, body {
+     height: 100%;
+     width: 100%;
+ }
+ 
+ html {
+     /* background-color: rgb(255, 255, 255); */
+     background-color: #98c9f5;
+ }
+
+ body {
+    overflow-x: hidden;
+    display: flex;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
