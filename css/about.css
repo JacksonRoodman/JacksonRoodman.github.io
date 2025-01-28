@@ -25,3 +25,11 @@
     justify-content: center;
     flex-direction: column; 
 }
+
+.me {
+    position: absolute;
+    width: 20vw;
+    height: 60vh;
+    top: 20vh;
+    left: 70vw;
+}
