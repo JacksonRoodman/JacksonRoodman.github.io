@@ -66,6 +66,6 @@
     height: auto;
 }
 #back-arrow:hover {
-    transform: scaleX(-1.2);
+    transform: scaleX(-1.21);
     transition: all 0.5s ease-in-out;
 }
