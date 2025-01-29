@@ -34,9 +34,9 @@
 .description {
     position:absolute;
     font-family: Merriweather;
-    transform:scale(2);
-    top:12vh;
-    left: 10vw;
+    transform:scale(1.8);
+    top:14vh;
+    left: 32vw;
 }
 
 #pronouns {
