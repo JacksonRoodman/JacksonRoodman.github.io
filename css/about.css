@@ -20,9 +20,6 @@
  body {
     overflow-x: hidden;
     display: flex;
-    text-align:center;
-    align-items: center;
-    justify-content: center;
     flex-direction: column; 
 }
 
@@ -35,6 +32,8 @@
 }
 
 #pronouns {
+    position:absolute;
+    font-size:large;
     font-family: Merriweather;
     transform: scaleY(2);
     top:78vh;
