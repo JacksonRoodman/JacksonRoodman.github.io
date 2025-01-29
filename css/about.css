@@ -35,7 +35,7 @@
     position:absolute;
     font-size:large;
     font-family: Merriweather;
-    transform: scaleY(2);
-    top:78vh;
-    left:68vw;
+    transform:scale(3.5);
+    top:80.5vh;
+    left:77.5vw;
 }
