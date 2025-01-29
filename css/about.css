@@ -31,6 +31,14 @@
     left: 68vw;
 }
 
+.domo {
+    position: absolute;
+    width: 50px;
+    height:50px;
+    top: 14vh;
+    left: 75vw;
+}
+
 .description {
     position:absolute;
     font-family: Merriweather;
