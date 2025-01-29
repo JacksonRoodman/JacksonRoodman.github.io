@@ -55,3 +55,16 @@
     top:80.5vh;
     left:77.5vw;
 }
+
+#back-arrow {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    z-index: 2000;
+    width: 125px;
+    height: auto;
+}
+#back-arrow:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
