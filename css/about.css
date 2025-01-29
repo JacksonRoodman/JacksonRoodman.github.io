@@ -58,14 +58,14 @@
 
 #back-arrow {
     position: fixed;
-    top: 3%;
-    left: 3%;
+    top: 1.6%;
+    left: 1.6%;
     z-index: 2000;
-    width: 125px;
+    width: 105px;
     transform: scaleX(-1);
     height: auto;
 }
 #back-arrow:hover {
-    transform: scale(1.1);
+    transform: scaleX(-1.2);
     transition: all 0.5s ease-in-out;
 }
