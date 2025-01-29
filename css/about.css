@@ -28,8 +28,15 @@
 
 .me {
     position: absolute;
-    width: 20vw;
-    height: 60vh;
-    top: 20vh;
-    left: 70vw;
+    width: 25vw;
+    height: 65vh;
+    top: 12vh;
+    left: 68vw;
+}
+
+#pronouns {
+    font-family: Merriweather;
+    transform: scaleY(2);
+    top:78vh;
+    left:68vw;
 }
