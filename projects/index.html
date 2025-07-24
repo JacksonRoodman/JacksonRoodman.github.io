@@ -3,14 +3,69 @@
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href = "css/main.css">
+        <link rel = "stylesheet" href = "../css/projects.css">
         <link rel="icon" href="assets/strawhat.png">
+        <link href="../css/output.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <title>Projects</title>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <title>projects</title>
+
+        <style>
+  @keyframes fall {
+    0% {
+      top: -20vh;
+      transform: scaleX(-1);
+    }
+
+    100% {
+      top: 110vh;
+      transform: scaleX(-1);
+    
+    }
+  }
+
+  .falling-cat {
+    animation: fall 2s linear infinite;
+  }
+</style>
+
     </head>
-    <body>
-        projects wip
+        <a href="https://jacksonroodman.github.io/">
+            <img src="../assets/catandgirl.png" class="w-20 h-auto absolute left-4 hover:animate-pulse">
+        </a>
+    <body class="bg-blue-300">
+ <section class="min-h-screen bg-blue-300 py-10 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-left">My Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/1000words.png" alt="Project 1" class="w-full h-auto object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/blueroom.png" alt="Project 2" class="w-full h-auto object-contain">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/hammergame.jpg" alt="Project 3" class="w-full h-auto object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/robotcar.jpg" alt="Project 4" class="w-auto h-full object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/carter.jpg" alt="Project 5" class="w-auto h-full object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/bilbert.png" alt="Project 6" class="w-auto h-full object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/lighttracking.png" alt="Project 7" class="w-full h-auto object-cover">
+      </div>
+      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+        <img src="../assets/objectdetection.jpg" alt="Project 8" class="w-full h-auto object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+<img src="../assets/kittycat.png" alt="Falling Cat" class="w-25 h-auto absolute right-3 -translate-x-0.5 falling-cat">
     </body>
 </html>
