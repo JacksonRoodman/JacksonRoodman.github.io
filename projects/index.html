@@ -28,6 +28,173 @@
   .falling-cat {
     animation: fall 2s linear infinite;
   }
+
+  /* Popup styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.popup-close:hover {
+  background: #dc2626;
+}
+
+.popup-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.popup-image-robot {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.popup-body {
+  padding: 32px;
+}
+
+.popup-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.popup-description {
+  color: #4b5563;
+  margin-bottom: 28px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.tech-section {
+  margin-bottom: 32px;
+}
+
+.tech-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 4px 8px 4px 0;
+  font-weight: 500;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.popup-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 15px;
+}
+
+.popup-button.live {
+  background: #3b82f6;
+  color: white;
+}
+
+.popup-button.live:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.popup-button.github {
+  background: #1f2937;
+  color: white;
+}
+
+.popup-button.github:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .popup-overlay {
+    padding: 10px;
+  }
+  
+  .popup-body {
+    padding: 24px;
+  }
+  
+  .popup-title {
+    font-size: 24px;
+  }
+  
+  .popup-buttons {
+    flex-direction: column;
+  }
+  
+  .popup-button {
+    justify-content: center;
+  }
+}
 </style>
 
     </head>
@@ -39,33 +206,209 @@
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold mb-8 text-left">My Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+      
+      <div onclick="openPopup('popup1')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/1000words.png" alt="Project 1" class="w-full h-auto object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+
+      <div onclick="openPopup('popup2')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/blueroom.png" alt="Project 2" class="w-full h-auto object-contain">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+      
+      <div onclick="openPopup('popup3')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/hammergame.jpg" alt="Project 3" class="w-full h-auto object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+
+      <div onclick="openPopup('popup4')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/robotcar.jpg" alt="Project 4" class="w-auto h-full object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
-        <img src="../assets/carter.jpg" alt="Project 5" class="w-auto h-full object-cover">
+
+      <div onclick="openPopup('popup5')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
+        <img src="../assets/carti.png" alt="Project 5" class="w-full h-auto object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+
+      <div onclick="openPopup('popup6')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/bilbert.png" alt="Project 6" class="w-auto h-full object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
-        <img src="../assets/lighttracking.png" alt="Project 7" class="w-full h-auto object-cover">
+
+      <div onclick="openPopup('popup7')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
+        <img src="../assets/solar.jpg" alt="Project 7" class="w-full h-auto object-cover">
       </div>
-      <div class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition">
+
+      <div onclick="openPopup('popup8')" class="bg-white aspect-square rounded-lg shadow-md flex items-center justify-center text-center text-lg font-medium hover:bg-blue-100 transition cursor-pointer">
         <img src="../assets/objectdetection.jpg" alt="Project 8" class="w-full h-auto object-cover">
       </div>
+
     </div>
   </div>
 </section>
+
+<div id="popup1" class="popup-overlay" onclick="closePopup('popup1')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup1')">&times;</button>
+    <img src="../assets/1000wordssite.png" alt="1000 Words" class="popup-image">
+    <div class="popup-body">
+      <h3 class="popup-title">1000Words</h3>
+      <p class="popup-description">Do you remember being a little kid doodling on the corner of your page while your teacher droned on and on about something you barely cared about? Nowadays, most students don’t even write their notes on paper and the art of doodling has silently disappeared, until now. 1000words provides students a spontaneous outlet for creativity and expression through a modern, yet nostalgic interface. Inspired by Pictochat on the Nintendo DS, we wanted to create a similar comfortable and familiar environment where users can sketch, talk, and express themselves in real time with a community of creatives. The target audience for our project is UCLA students. 
+        <br><br>
+        I worked in a team of 5 students. My contributions were the live chat room, live art gallery, room select page, and Google authentication. 
+      </p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">Firebase</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://1000words.lol" class="popup-button live">🔗 Visit Site</a>
+        <a href="https://github.com/satalites/CS35L-Final-Project.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup2" class="popup-overlay" onclick="closePopup('popup2')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup2')">&times;</button>
+     <div class="popup-body">
+      <h3 class="popup-title">b1ueroom.org</h3>
+      <p class="popup-description">An online chatroom that I made using React, Node.js, and Firebase. I made this website to use as a cryptic form of communication with my friends during lectures or if we were in a quiet study space.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Firebase</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://b1ueroom.org" class="popup-button live">🔗 Visit Site</a>
+        <a href="https://github.com/JacksonRoodman/b1ueroom_chat.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup3" class="popup-overlay" onclick="closePopup('popup3')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup3')">&times;</button>
+    <img src="../assets/hammergame.jpg" alt="Hammer Game" class="popup-image">
+    <div class="popup-body">
+      <h3 class="popup-title">Hammer Game</h3>
+      <p class="popup-description">Developed an interactive digital hammer game inspired by traditional carnival strength testers, using a Raspberry Pi and Python. The game featured a beam break sensor to detect player input (simulating a hammer strike) and a vertical LED strip to visually represent the force of the hit. Designed custom LED animations for different game states, including idle mode, active strike visualization, and victory or failure feedback. Programmed responsive game logic in Python to calculate and display results in real time, ensuring smooth transitions and engaging visual effects. Consistently used at UCLA hill events.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">Raspberry Pi</span>
+        <span class="tech-tag">Python</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://github.com/JacksonRoodman/HammerGame.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup4" class="popup-overlay" onclick="closePopup('popup4')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup4')">&times;</button>
+    <img src="../assets/robotcar.jpg" alt="Robot Car" class="popup-image">
+    <div class="popup-body">
+      <h3 class="popup-title">Line-Following Robot Car</h3>
+      <p class="popup-description">Designed and programmed an autonomous line-tracking robot car using Arduino to navigate a course with complex challenges, including disconnected paths and decoy black bars. The robot used an array of infrared sensors to detect line position, and implemented a custom PID control algorithm to adjust motor speed and steering for smooth, accurate line following. The PID controller was tuned to minimize oscillations and overshooting, enabling the robot to respond precisely to sharp turns, gaps, and false signals. The system demonstrated robust performance and adaptability in a dynamic test environment.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">Arduino</span>
+        <span class="tech-tag">PID Control</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://youtube.com/shorts/w5A_KKJ9XyI?feature=share" class="popup-button live">🔗 Live Demo</a>
+        <a href="https://github.com/JacksonRoodman/ece3-bot.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup5" class="popup-overlay" onclick="closePopup('popup5')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup5')">&times;</button>
+    <img src="../assets/carti.png" alt="Carti" class="popup-image-robot">
+    <div class="popup-body">
+      <h3 class="popup-title">Carti: 3-Stage Robot Arm</h3>
+      <p class="popup-description">Developed control software for a 3-stage robotic arm used in an FRC (FIRST Robotics Competition) robot that competed at the 2023 World Championship in Houston. The arm's motion was governed by inverse kinematics and coordinated multi-joint control, enabling smooth and accurate positioning. Implemented and fine-tuned custom PID control loops for each joint, accounting for joint coupling and dynamic load variations. Emphasized real-time responsiveness and stability under high-speed, high-stress conditions. This system enabled the robot to reliably manipulate game pieces with precision during autonomous and teleoperated periods, contributing to competitive performance at the highest level of play.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">C++</span>
+        <span class="tech-tag">PID Control</span>
+        <span class="tech-tag">WPILib</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://youtu.be/EGSRACxfrww" class="popup-button live">🔗 Live Demo</a>
+        <a href="https://github.com/Robodox-599/2023_Cardiologist.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup6" class="popup-overlay" onclick="closePopup('popup6')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup6')">&times;</button>
+    <img src="../assets/bilbert.png" alt="Bilbert" class="popup-image-robot">
+    <div class="popup-body">
+      <h3 class="popup-title">Bilbert: Vision-Guided Flywheel Shooter</h3>
+      <p class="popup-description">Programmed a precision flywheel shooter system for an FRC robot that reached the finals at Beach Blitz 2022. The mechanism included a 360-degree rotating turret, an adjustable hood for variable shot trajectories, and a dual-wheel flywheel for consistent ball velocity. Integrated a Limelight vision system to enable real-time target tracking and distance estimation. Developed C++ control algorithms to calculate optimal flywheel speed and hood angle based on target position. Tuned multiple PID controllers to manage turret rotation, hood positioning, and flywheel velocity, ensuring rapid and accurate adjustments during autonomous and teleoperated periods. The system performed reliably under high-pressure match conditions, significantly improving scoring consistency.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">C++</span>
+        <span class="tech-tag">PID Control</span>
+        <span class="tech-tag">WPILib</span>
+        <span class="tech-tag">Limelight Vision Camera</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://youtube.com/shorts/ZZppdK_wOWc?feature=share" class="popup-button live">🔗 Live Demo</a>
+        <a href="https://github.com/Robodox-599/2022OffseasonBot.git" class="popup-button github">📱 View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup7" class="popup-overlay" onclick="closePopup('popup7')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup7')">&times;</button>
+    <img src="../assets/lighttracking.png" alt="Light Tracking" class="popup-image-robot">
+    <div class="popup-body">
+      <h3 class="popup-title">Light Tracking Solar Panel</h3>
+      <p class="popup-description">Designed and built a light-tracking solar panel system that dynamically adjusts its orientation to maximize sunlight intake. The setup used two light-dependent resistors (LDRs) positioned on either side of the panel to detect the direction of the strongest light source. An Arduino microcontroller read the LDR values and controlled a servo motor to rotate the panel toward the brighter side. Implemented analog signal processing and threshold logic in Arduino C/C++ to ensure responsive, stable tracking behavior. A USB port was custom-soldered to the panel to serve as a power output, allowing the solar panel to function as a mobile energy source for low-power devices.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">Arduino</span>
+        <span class="tech-tag">Soldering</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://youtu.be/W3Cll0OzDmw" class="popup-button live">🔗 Live Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup8" class="popup-overlay" onclick="closePopup('popup8')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup('popup8')">&times;</button>
+    <img src="../assets/objectdetection.jpg" alt="Object Detection" class="popup-image">
+    <div class="popup-body">
+      <h3 class="popup-title">Street Object Detection</h3>
+      <p class="popup-description">Implemented a real-time object detection system using the YOLO (You Only Look Once) deep learning model to identify and classify common street objects, including vehicles, pedestrians, bicycles, and traffic lights. Trained and tested the model using Python, leveraging pre-trained weights and custom dataset tuning to improve detection accuracy. Integrated the model with live or recorded video feeds to visualize bounding boxes and confidence levels in real time.</p>
+      <div class="tech-section">
+        <h4 class="tech-title">Technologies:</h4>
+        <span class="tech-tag">YOLO</span>
+        <span class="tech-tag">OpenCV</span>
+        <span class="tech-tag">Python</span>
+      </div>
+      <div class="popup-buttons">
+        <a href="https://youtu.be/i5YIo9EJZRw" class="popup-button live">🔗 Live Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <img src="../assets/kittycat.png" alt="Falling Cat" class="w-25 h-auto absolute right-3 -translate-x-0.5 falling-cat">
+<script src="../js/projects.js"></script>
     </body>
 </html>
